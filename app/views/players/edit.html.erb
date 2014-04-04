@@ -1,0 +1,19 @@
+<h1>Edit <%= @player.name %></h1>
+
+<%= render('layouts/errors', object: @player) %>
+
+<form action="/players/<%= @player.id %>"  method="post">
+  <input name="_method" type="hidden" value="patch">
+  <%= render('form') %>
+  <label for="player_goals">Goals</label>
+  <input id="player_goals" name="goals" type = "text" value="<%= @player.goals %>">
+  <label for="player_assists">Assists</label>
+  <input id="player_assists" name="assists" type = "text" value="<%= @player.assists %>">
+  <label for="player_yellows">Yellow Cards</label>
+  <input id="player_yellows" name="yellows" type = "text" value="<%= @player.yellows %>">
+  <label for="player_reds">Red Cards</label>
+  <input id="player_reds" name="reds" type = "text" value="<%= @player.reds %>">
+  <label for="player_minutes">Minutes Played</label>
+  <input id="player_minutes" name="minutes" type = "text" value="<%= @player.minutes %>">
+  <button>Update</button>
+</form>

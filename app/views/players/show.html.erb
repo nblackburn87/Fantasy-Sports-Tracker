@@ -1,0 +1,23 @@
+<h1><%= @player.name %>, <%= @player.position %></h1>
+<button type="button" class="btn btn-success"><a href="/players/<%= @player.id %>/edit">Edit</a></button>
+<button type="button" class="btn btn-warning"><a href="/players/<%= @player.id %>"
+data-confirm="Are you sure?"
+data-method="delete"
+rel="nofollow">Delete</a></button>
+
+<h3>Goals:</h3>
+<p><%= @player.goals %></p>
+
+<h3>Assists:</h3>
+<p><%= @player.assists %></p>
+
+<h4>Yellow Cards:</h4>
+<p><%= @player.yellows %></p>
+
+<h4>Red Cards:</h4>
+<p><%= @player.reds %></p>
+
+<h4>Minutes Played:</h4>
+<p><%= @player.minutes %></p>
+
+<a href="/">Click to return to the full player listing</a>

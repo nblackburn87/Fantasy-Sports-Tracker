@@ -1,0 +1,8 @@
+<h1>Add a New Player</h1>
+
+<%= render('layouts/errors', :object => @player) %>
+
+<form action="/players" method="post">
+  <%= render('form') %>
+  <button>Add Player</button>
+</form>

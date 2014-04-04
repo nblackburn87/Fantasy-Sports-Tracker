@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Player do
+describe Team do
   it { should validate_presence_of :name }
-  it { should belong_to :team}
+  it { should have_many :players }
 end
