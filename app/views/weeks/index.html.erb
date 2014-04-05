@@ -1,0 +1,9 @@
+<h1>Weeks</h1>
+
+<ul>
+  <% @weeks.each do |week| %>
+    <li><a href="weeks/<%= week.id %>"><%= week.start_date %>-<%= week.end_date %></a></li>
+  <% end %>
+</ul>
+
+<a href="/weeks/new">Click here to add a new week.</a>

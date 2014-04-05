@@ -1,0 +1,14 @@
+<h1><%= @team.name %></h1>
+<button type="button" class="btn btn-success"><a href="/teams/<%= @team.id %>/edit">Edit</a></button>
+<button type="button" class="btn btn-warning"><a href="/teams/<%= @team.id %>"
+data-confirm="Are you sure?"
+data-method="delete"
+rel="nofollow">Delete</a></button>
+
+<h3>Roster:</h3>
+<ul><% @team.players.each do |player| %>
+  <li><a href="players/<%= player.id %>"><%= player.name %>, <%= player.position %></a></li>
+<% end %>
+</ul>
+
+<a href="/players/new">Click here to add a player to this team</a>

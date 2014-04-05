@@ -6,4 +6,9 @@
   <option value="D">Defender</option>
   <option value="GK">Goalkeeper</option>
 </select>
+<select id="player_team_id" name="team_id">
+  <% Team.all.each do |team| %>
+    <option value="<%= team.id %>"><%= team.name %></option>
+  <% end %>
+</select>
 

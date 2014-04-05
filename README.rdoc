@@ -1,28 +1,18 @@
-== README
+=Fantasy Soccer Stat_tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+_____________________________________
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+A Rails App for tracking your team's progress in the BSL Fantasy Soccer League.
+
+*As league commissioner, I want to CRUD all of the league's teams. (COMPLETED)
+
+*As league commissioner, I want to CRUD MLS players. (COMPLETED)
+
+*As league commissioner, I want to assign players to BSL teams, reassign them after trades, and delete them (or mark them as inactive) if they're dropped from a BSL team. (COMPLETED)
+
+*As league commissioner, I want to add statistics like goals, assists, cards, and minutes played about a player after games are played. (COMPLETED)
+
+*As league commissioner, I want to create new weeks for teams to play against one another in. (in progress)
+
+*As a team owner, I want to be able to submit a roster of starters, subs, and reserves for a given week.

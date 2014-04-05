@@ -17,7 +17,8 @@ class PlayersController < ApplicationController
                          :yellows => params[:yellows],
                          :reds => params[:reds],
                          :minutes => params[:minutes],
-                         :position => params[:position])
+                         :position => params[:position],
+                         :team_id => params[:team_id])
     if @player.save
       flash[:notice] = "This player has been added successfully."
       redirect_to('/players')
@@ -33,14 +34,15 @@ class PlayersController < ApplicationController
 
   def update
     @player = Player.find(params[:id])
-    @goals = @player.goals
+    # @goals = @player.goals -----> will be needed for JQuery incrementing total updates.
     @player.update(:name => params[:name],
                    :goals => params[:goals],
                    :assists => params[:assists],
                    :yellows => params[:yellows],
                    :reds => params[:reds],
                    :minutes => params[:minutes],
-                   :position => params[:position])
+                   :position => params[:position],
+                   :team_id => params[:team_id])
     if @player.save
       flash[:notice] = "Your update was successfully saved!"
       redirect_to('/players')

@@ -20,4 +20,5 @@ rel="nofollow">Delete</a></button>
 <h4>Minutes Played:</h4>
 <p><%= @player.minutes %></p>
 
-<a href="/">Click to return to the full player listing</a>
+<a href="/">Click to return to the full player listing</a><br>
+<a href="/teams/<%= @player.team_id %>">Click to return to full roster for <%= @player.name %>'s team</a>

@@ -1,0 +1,9 @@
+<h1>Add a New Team</h1>
+
+<%= render('layouts/errors', :object => @team) %>
+
+<form action="/teams" method="post">
+  <label for="team_name">Name</label>
+  <input id="team_name" name="name" type="text">
+  <button>Add Team</button>
+</form>
