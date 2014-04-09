@@ -1,6 +1,6 @@
 <h1><%= @player.name %>, <%= @player.position %></h1>
-<button type="button" class="btn btn-success"><a href="/players/<%= @player.id %>/edit">Edit</a></button>
-<button type="button" class="btn btn-warning"><a href="/players/<%= @player.id %>"
+<button type="button" class="btn btn-default"><a href="/players/<%= @player.id %>/edit">Edit</a></button>
+<button type="button" class="btn btn-danger"><a href="/players/<%= @player.id %>"
 data-confirm="Are you sure?"
 data-method="delete"
 rel="nofollow">Delete</a></button>
@@ -10,7 +10,7 @@ rel="nofollow">Delete</a></button>
 
 <h3>Assists:</h3>
 <p><%= @player.assists %></p>
-
+<br>
 <h4>Yellow Cards:</h4>
 <p><%= @player.yellows %></p>
 
@@ -20,5 +20,5 @@ rel="nofollow">Delete</a></button>
 <h4>Minutes Played:</h4>
 <p><%= @player.minutes %></p>
 
-<a href="/">Click to return to the full player listing</a><br>
-<a href="/teams/<%= @player.team_id %>">Click to return to full roster for <%= @player.name %>'s team</a>
+<%= link_to "Full Player Listing", players_path, :class => "btn btn-default" %>
+<%= link_to "#{@player.team.name} Player Listing", team_path(@player.team_id), :class => "btn btn-default" %>

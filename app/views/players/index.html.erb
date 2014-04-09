@@ -6,4 +6,5 @@
 <% end %>
 </ul>
 
-<a href="/players/new">Click here to add a new player.</a>
+<%= link_to "Add New Player", new_player_path, :class => "btn btn-default" %>
+<%= link_to "Return to Team Index", teams_path, :class => "btn btn-default" %>

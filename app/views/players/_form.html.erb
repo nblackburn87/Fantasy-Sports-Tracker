@@ -1,14 +1,19 @@
-<label for="player_name">Title</label>
-<input id="player_name" name="name" type = "text" value="<%= @player.name %>">
-<select id="player_position" name="position">
-  <option value="F">Forward</option>
-  <option value="M">Midfielder</option>
-  <option value="D">Defender</option>
-  <option value="GK">Goalkeeper</option>
-</select>
-<select id="player_team_id" name="team_id">
-  <% Team.all.each do |team| %>
-    <option value="<%= team.id %>"><%= team.name %></option>
-  <% end %>
-</select>
+<%= render('layouts/errors', :object => @player) %>
 
+<%= form_for(@player) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :Name %>
+    <%= f.text_field :name %>
+  </div>
+</br>
+  <div class="form_group">
+    <%= f.select(:position, options_for_select([["Forward", "F"], ["Midfielder", "M"], ["Defender", "D"], ["Keeper", "GK"]])) %>
+  </div>
+  <br>
+  <div>
+    <%= f.collection_select :team_id, Team.all, :id, :name %>
+  </div>
+  <br>
+  <%= f.submit(:class => "btn btn-default") %>
+<% end %>

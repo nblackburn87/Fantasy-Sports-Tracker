@@ -1,0 +1,11 @@
+<%= render('layouts/errors', :object => @team) %>
+
+<%= form_for(@team) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :Name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.submit(:class => "btn btn-default") %>
+<% end %>
