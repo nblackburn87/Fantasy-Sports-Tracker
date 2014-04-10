@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'less-rails-bootstrap'
 gem 'therubyracer'
+gem 'factory_girl'
+gem 'capybara'
 
 group :development do
   gem 'better_errors'
@@ -19,6 +21,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :test do
