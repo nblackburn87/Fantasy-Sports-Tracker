@@ -1,6 +1,6 @@
 <%= render('layouts/errors', :object => @team) %>
 
-<%= form_for(@team) do |f| %>
+<%= form_for(@team), remote: true do |f| %>
 
   <div class="form-group">
     <%= f.label :Name %>

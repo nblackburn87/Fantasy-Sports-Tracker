@@ -42,7 +42,10 @@ class PlayersController < ApplicationController
                    :team_id => params[:player][:team_id])
     if @player.save
       flash[:notice] = "Your update was successfully saved!"
-      redirect_to players_path
+      respond_to do |format|
+        format.html { redirect_to players_path }
+        format.js
+      end
     else
       flash[:alert] = "Your update was not saved."
       render 'edit'

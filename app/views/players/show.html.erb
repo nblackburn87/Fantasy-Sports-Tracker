@@ -1,9 +1,9 @@
 <h1><%= @player.name %>, <%= @player.position %></h1>
-<button type="button" class="btn btn-default"><a href="/players/<%= @player.id %>/edit">Edit</a></button>
-<button type="button" class="btn btn-danger"><a href="/players/<%= @player.id %>"
-data-confirm="Are you sure?"
-data-method="delete"
-rel="nofollow">Delete</a></button>
+<%= link_to "Edit", edit_player_path(@player.id), remote: true, id: "edit_player", :class => "btn btn-default btn-xs" %>
+<%= link_to "Delete", player_path(@player.id),
+					  data: { confirm: "Are you sure?" },
+					  method: "delete", 
+					  :class => "btn btn-danger btn-xs" %>
 
 <h3>Goals:</h3>
 <p><%= @player.goals %></p>
